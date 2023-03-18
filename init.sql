@@ -10,6 +10,7 @@ CREATE TABLE LIBRARIES
 CREATE TABLE BOOKS
 (
     call_num INTEGER  NOT NULL,
+    -- Owning library
     lib_id   INTEGER  NOT NULL,
     genre    CHAR(20),
     ISBN     CHAR(13) NOT NULL,
@@ -22,6 +23,7 @@ CREATE TABLE BOOKS
 CREATE TABLE PATRONS
 (
     p_id   INTEGER   NOT NULL,
+    -- Registered home library
     lib_id INTEGER   NOT NULL,
     name   CHAR(50),
     email  CHAR(320) NOT NULL,
@@ -88,10 +90,10 @@ VALUES (0, 1, 'Linus Torvalds', 'torvalds@linux.org');
 -- Check out
 
 INSERT INTO CHECKS_OUT (p_id, p_lib_id, call_num, b_lib_id, day_checked, due_date)
-VALUES (0, 0, 2, 0, '3/17/2023', '3/30/2023');
+VALUES (0, 0, 2, 0, '2023-03-16', '2023-03-30');
 
 INSERT INTO CHECKS_OUT (p_id, p_lib_id, call_num, b_lib_id, day_checked, due_date)
-VALUES (0, 0, 4, 0, '3/17/2023', '3/30/2023');
+VALUES (0, 0, 4, 0, '2023-03-17', '2023-03-30');
 
 INSERT INTO CHECKS_OUT (p_id, p_lib_id, call_num, b_lib_id, day_checked, due_date)
-VALUES (0, 1, 1, 1, '1/1/1970', '2/1/1970');
+VALUES (0, 1, 1, 1, '1970-01-01', '1970-02-01');
