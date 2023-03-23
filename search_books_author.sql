@@ -1,4 +1,4 @@
--- Views the libraries and locations that have books available on a given book title
+-- Views the libraries and locations that have books available on a given book author
 SELECT L.lib_id, name, location
 FROM BOOKS
     JOIN LIBRARIES L on L.lib_ID = BOOKS.lib_id
