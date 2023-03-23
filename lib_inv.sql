@@ -2,4 +2,4 @@
 SELECT call_num, BOOKS.lib_id, genre, ISBN, title, author
 FROM BOOKS
          JOIN LIBRARIES L on L.lib_id = BOOKS.lib_id
-WHERE name == {}
+WHERE name == ?
