@@ -1,3 +1,4 @@
+-- Enable FK constraints
 PRAGMA foreign_keys = 1;
 
 CREATE TABLE LIBRARIES
